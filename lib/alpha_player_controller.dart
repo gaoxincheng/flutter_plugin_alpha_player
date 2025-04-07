@@ -78,6 +78,11 @@ class AlphaPlayerController {
     return _channel.invokeMethod('detachView');
   }
 
+  ///重置播放器
+  static Future<dynamic> resetPlayer() async {
+    return _channel.invokeMethod('resetPlayer');
+  }
+
   ///释放播放器
   static Future<dynamic> releasePlayer() async {
     return _channel.invokeMethod('releasePlayer');

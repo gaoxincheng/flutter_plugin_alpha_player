@@ -153,6 +153,11 @@ class VideoGiftView: FrameLayout,LifecycleOwner {
         mPlayerController.detachAlphaView(mVideoContainer)
     }
 
+    //重置播放器
+    fun resetPlayer() {
+        mPlayerController.reset()
+    }
+
     //释放动画相关资源
     fun releasePlayerController() {
         mPlayerController.let {
@@ -161,12 +166,12 @@ class VideoGiftView: FrameLayout,LifecycleOwner {
         }
     }
 
-//    override fun getLifecycle(): Lifecycle {
-//       return mRegistry
-//    }
+    // override fun getLifecycle(): Lifecycle {
+    //    return mRegistry
+    // }
 
     override val lifecycle: Lifecycle
-        get() = mRegistry
+            get() = mRegistry
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()

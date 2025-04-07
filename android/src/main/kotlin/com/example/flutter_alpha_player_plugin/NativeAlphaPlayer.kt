@@ -87,6 +87,13 @@ internal class NativeAlphaPlayer(
                 alphaPlayer.detachView()
                 result.success(0)
             }
+
+            //重置播放器
+            "resetPlayer"->{
+                alphaPlayer.resetPlayer()
+                result.success(0)
+            }
+
             //释放播放器
             "releasePlayer"->{
                 alphaPlayer.releasePlayerController();
