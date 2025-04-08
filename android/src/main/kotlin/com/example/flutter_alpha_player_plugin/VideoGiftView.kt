@@ -20,6 +20,8 @@ import com.ss.ugc.android.alpha_player.model.DataSource
 import com.ss.ugc.android.alpha_player.model.ScaleType
 import com.ss.ugc.android.alpha_player.player.DefaultSystemPlayer
 import java.io.File
+import android.graphics.Color
+import android.view.View
 
 /**
  * 视频动画展示界面
@@ -48,6 +50,7 @@ class VideoGiftView: FrameLayout,LifecycleOwner {
             android.view.ViewGroup.LayoutParams.MATCH_PARENT,
             android.view.ViewGroup.LayoutParams.MATCH_PARENT)
         removeAllViews()
+	mVideoContainer.setBackgroundColor(Color.TRANSPARENT)
         addView(mVideoContainer)
     }
 
@@ -144,14 +147,15 @@ class VideoGiftView: FrameLayout,LifecycleOwner {
             isAttach = true
             mPlayerController.attachAlphaView(mVideoContainer)
         }
-      
+        setVisibility(View.VISIBLE);
     }
 
-    //移除动画窗体
-    fun detachView() {
-        isAttach = false
-        mPlayerController.detachAlphaView(mVideoContainer)
-    }
+  //移除动画窗体
+  fun detachView() {
+    setVisibility(View.INVISIBLE);
+   // isAttach = false
+   // mPlayerController.detachAlphaView(mVideoContainer)
+  }
 
     //重置播放器
     fun resetPlayer() {
