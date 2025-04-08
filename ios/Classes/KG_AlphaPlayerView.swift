@@ -201,7 +201,7 @@ class KG_AlphaPlayerView: UIView,BDAlphaPlayerMetalViewDelegate {
 //            }
             return true
         } else { /// 不存在存储 (path = heartbeats.mp4)
-            let portraitDic:[String : Any] = ["align":2,"path":fileName]
+            let portraitDic:[String : Any] = ["align":1,"path":fileName]
             let landscapeDic:[String : Any] = ["path":fileName,"align":8]
 
             let configDic:[String : Any] = ["portrait":portraitDic,"landscape":landscapeDic]
