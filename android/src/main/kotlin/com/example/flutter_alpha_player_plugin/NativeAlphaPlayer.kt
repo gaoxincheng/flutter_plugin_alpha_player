@@ -58,7 +58,7 @@ internal class NativeAlphaPlayer(
             )
             alphaPlayer.attachView()
 
-            channel = MethodChannel(binaryMessenger, "flutter_alpha_player_plugin")
+            channel = MethodChannel(binaryMessenger, "flutter_alpha_player_plugin_$id")
             channel.setMethodCallHandler(this);
         }
     }

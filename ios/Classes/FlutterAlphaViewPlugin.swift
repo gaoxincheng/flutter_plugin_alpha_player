@@ -26,7 +26,7 @@ class FlutterAlphaViewPlugin: NSObject,FlutterPlatformView,KG_AlphaPlayerCallBac
          _arguments = arguments
          _pluginRegistrar = pluginRegistrar
          ///建立通信通道 用来 监听Flutter 的调用和 调用Fluttter 方法 这里的名称要和Flutter 端保持一致
-         _methodChannel = FlutterMethodChannel(name: "flutter_alpha_player_plugin", binaryMessenger: pluginRegistrar.messenger())
+         _methodChannel = FlutterMethodChannel(name: "flutter_alpha_player_plugin_" + String(viewIdentifier), binaryMessenger: pluginRegistrar.messenger())
          _methodChannel?.setMethodCallHandler(handleMethod)
     }
     
